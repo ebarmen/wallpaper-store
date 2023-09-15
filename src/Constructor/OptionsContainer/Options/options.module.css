@@ -1,0 +1,14 @@
+.separator {
+    margin-bottom: 10px;
+}
+
+.heading {
+    font-size: var(--fs-sub-heading);
+    font-weight: 800;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.singleOptionDisabled {
+    display: none;
+}

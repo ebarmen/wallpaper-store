@@ -1,0 +1,61 @@
+.container {
+    position: relative;
+    width: calc(75%);
+    height: 100%;
+}
+
+.plusMinusContainer {
+    position: absolute;
+    top: 0;
+    display: flex;
+    gap: 2px;
+    margin: 8px;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.right:first-child {
+    margin-right: 20px;
+}
+
+.iconContainer {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.iconPanelContainer {
+    opacity: .7;
+}
+
+.iconPanelContainer svg {
+    fill: var(--black);
+    transition: .2s ease;
+}
+
+.iconContainer svg {
+    fill: var(--black);
+}
+
+.iconContainer:hover svg {
+    fill: var(--orange);
+}
+
+.iconContainer.disabled > div {
+    border-color: var(--border-light);
+}
+
+.iconContainer.disabled svg {
+    fill: var(--border-light) !important;
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}

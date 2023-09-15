@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0 16px;
+    cursor: pointer;
+}
+
+.container.texture {
+    cursor: auto;
+}
+
+.heading {
+    font-size: var(--fs-heading);
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.container a {
+    font-size: var(--fs-small-plus);
+    display: block;
+    margin-top: 6px;
+}
+
+.container svg {
+    margin-right: 5px;
+}
+
+.iconContainer {
+    height: 24px;
+    width: 24px;
+}
+
+.iconContainer svg {
+    width: 100%;
+    height: 100%;
+}
+
+.container .button span {
+    display: inline-block;
+    margin-top: 3px;
+    vertical-align: top;
+    transition: .2s ease;
+}
+
+.container .button:hover span {
+    color: var(--orange);
+}
+
+.container .button svg {
+    margin-right: 15px;
+}
+
+.container .button svg path {
+    transition: .2s ease;
+}
+
+.container .button:hover svg path:first-child {
+    fill: var(--orange);
+}
+
+.container .button:hover svg path:nth-child(2) {
+    stroke: var(--orange);
+}
+
+.headerIcon path {
+    transition: .2s ease;
+}
+
+.container:hover .headerIcon path {
+    stroke: var(--orange);
+}
+
+@media (max-width: 400px) {
+    .container.texture  {
+        flex-direction: column;
+    }
+
+    .rowMobileColumn button {
+        text-align: left;
+        margin-top: 20px;
+    }
+}

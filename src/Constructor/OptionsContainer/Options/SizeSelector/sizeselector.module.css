@@ -1,0 +1,79 @@
+.sizeInputs {
+    position: relative;
+}
+
+.sizeInput {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.sizeInput:first-child {
+    margin-right: 20px;
+}
+
+.sizeInput input {
+    width: 100%;
+    padding: 15px 10px;
+    height: 20px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    transition: .2s ease;
+}
+
+.sizeInputError input {
+    border-color: red;
+}
+
+.standartOption input {
+    color: var(--orange);
+}
+
+.sizeInput input:hover {
+    border-color: var(--orange);
+}
+
+.sizeInput input:focus {
+    border-color: var(--orange);
+    outline: none;
+}
+
+.sizeInput label {
+    display: block;
+    font-size: var(--fs-small-plus);
+    margin-bottom: 5px;
+}
+
+.sizeInput svg {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    width: 24px;
+    height: auto;
+}
+
+.sizeInput svg > path {
+    fill: var(--orange);
+}
+
+.heading {
+    font-size: var(--fs-sub-heading);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.sizeError {
+    position: absolute;
+    bottom: -4px;
+    width: 100%;
+    margin: 0;
+    padding: 4px 2px;
+    border-radius: 4px;
+    color: var(--white);
+    background-color: var(--orange);
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    transform: translateY(100%);
+}

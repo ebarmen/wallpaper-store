@@ -1,0 +1,123 @@
+.container {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.container.hidden {
+    display: none;
+}
+
+.container .name {
+    transition: .2s ease;
+}
+
+.container:hover .name {
+    color: var(--orange);
+}
+
+.name {
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: var(--black);
+    font-size: 12px;
+}
+
+.text {
+    color: var(--light-font-color);
+    font-size: 11px;
+}
+
+.centerPrice {
+    text-align: center;
+}
+
+.text span {
+    color: var(--grey66);
+}
+
+.imageContainer {
+    position: relative;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.imageWrap {
+    padding: 5px;
+    border: 1px solid transparent;
+    transition: .2s ease;
+}
+
+.imageWrapSelected {
+    border-color: var(--orange);
+}
+
+.imageContainer:hover {
+    opacity: .5;
+}
+
+.imageContainer:hover .name {
+    color: var(--orange);
+}
+
+.textureImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e4e4e4;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+}
+
+.imageContainer:not(.textureImageContainer) img {
+    width: 100%;
+    display: block;
+}
+
+.textureImageContainer img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+}
+
+.selected img {
+    opacity: .7;
+}
+
+.categoryContainer .name {
+    color: var(--black);
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.categoryContainer:hover img {
+    opacity: .7;
+}
+
+.collectionContainer .name {
+    text-align: center;
+}
+
+.textureContainer .name,
+.textureContainer .text {
+    margin-left: 5px;
+}
+
+@media (max-width: 767px) {
+    .categoryContainer .text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .categoryContainer .text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .categoryContainer .text {
+        font-size: 12px;
+    }
+}

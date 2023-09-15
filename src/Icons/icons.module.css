@@ -1,0 +1,34 @@
+.iconWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--border-grey);
+  border-radius: 100%;
+  background-color: var(--white);
+  transition: .2s ease;
+}
+
+.iconWrap > svg {
+  width: 36px;
+  height: 36px;
+}
+
+.iconWrap:hover {
+  border-color: var(--orange);
+}
+
+.panelIconWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: .2s ease;
+}
+
+.panelIconWrap > svg {
+  width: 36px;
+  height: 36px;
+}

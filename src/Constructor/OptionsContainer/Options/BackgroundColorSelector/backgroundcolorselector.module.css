@@ -1,0 +1,72 @@
+.container {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    font-size: var(--fs-small-plus);
+    transition: .2s ease;
+}
+
+.container:hover {
+    border-color: var(--orange);
+}
+
+.imageContainer {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    flex-shrink: 0 !important;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.name {
+    position: absolute;
+    font-size: 10px;
+    background-color: var(--black);
+    top: 0;
+    right: 0;
+    margin: auto;
+    color: var(--white);
+}
+
+.categoryForPr {
+    font-size: 14px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.button svg {
+    width: 10px;
+    height: 16px;
+}
+
+.button svg > path {
+    transition: .2s ease;
+}
+
+.button:hover svg > path {
+    stroke: var(--orange);
+}
+
+.price, .price span {
+    color: var(--light-font-color);
+}
+
+
+@media (max-width: 992px) {
+    .nameContainer {
+        width: calc(100% - 148px);
+    }
+}
+

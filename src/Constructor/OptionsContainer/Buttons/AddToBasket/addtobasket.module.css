@@ -1,0 +1,72 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    padding: 12px;
+    border: 1px solid transparent;
+    text-align: center;
+    font-size: var(--fs-small-plus);
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: .2s ease;
+}
+
+.button svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    vertical-align: bottom;
+    transition: .9s ease;
+}
+
+.button svg path {
+    transition: .2s ease;
+}
+
+.button:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+.button:hover svg path:first-child {
+    fill: var(--orange);
+}
+.button:hover svg path:nth-child(2) {
+    stroke: var(--orange);
+}
+
+.addToBasketButton {
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.addToBasketButton svg > path:first-child {
+    fill: var(--white);
+}
+
+.addToBasketButton svg > path:last-child {
+    stroke: var(--white);
+}
+
+.addToBasketButton:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+    background-color: var(--white);
+}
+
+.addToBasketButton:hover svg > path:first-child {
+    fill: var(--orange);
+}
+.addToBasketButton:hover svg path:nth-child(2) {
+    stroke: var(--orange);
+}
+
+.basketLink {
+    border-color: var(--black);
+}
+
+.basketLink svg > path {
+    fill: var(--black);
+    stroke: var(--black);
+}

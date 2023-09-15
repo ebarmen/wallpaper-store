@@ -1,0 +1,10 @@
+.heading {
+    font-size: var(--fs-heading);
+    margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.container {
+    margin: 16px 0 28px;
+}

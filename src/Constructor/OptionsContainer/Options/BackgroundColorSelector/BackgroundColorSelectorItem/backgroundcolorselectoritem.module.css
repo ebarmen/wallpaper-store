@@ -1,0 +1,132 @@
+.container {
+    margin-bottom: 12px;
+}
+
+.container:last-child {
+    margin-bottom: 0;
+}
+
+.contentRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container p, .container button {
+    font-size: var(--fs-small-plus);
+}
+
+.container p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.container button {
+    color: var(--black);
+    cursor: pointer;
+    width: fit-content;
+    transition: .2s ease;
+}
+
+.container button.open {
+    color: var(--orange);
+}
+
+.container button.open svg > path {
+    stroke: var(--orange);
+}
+
+.container button:hover {
+    color: var(--orange);
+}
+
+.container button svg > path {
+    transition: .2s ease;
+}
+
+.container button:hover svg > path {
+    stroke: var(--orange);
+}
+
+.dataContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dataContainer > p {
+    color: var(--light-font-color);
+    white-space: nowrap;
+}
+
+.nameWrap {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.nameWrap a {
+    margin-left: 5px;
+    padding-top: 1px;
+    color: var(--light-font-color);
+    transition: .2s ease;
+}
+
+.nameWrap a:hover {
+    color: var(--orange);
+}
+
+.nameWrap > p {
+    display: inline;
+    color: var(--light-font-color);
+    transform-origin: left;
+    transition: .2s ease;
+}
+
+.row {
+    display: flex;
+}
+
+.row .nameWrap > p {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 14px;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.row .nameWrap > p:hover {
+    color: var(--light-font-color);
+}
+
+.dataContainer svg {
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+}
+
+.chosenTitle {
+    color: var(--orange) !important;
+}
+
+.info {
+    padding: 12px 16px 8px;
+    border: 1px solid var(--border-grey);
+    border-radius: 8px;
+    background-color: var(--orange);
+    cursor: pointer !important;
+}
+
+.tooltipContent {
+    margin: 0 0 4px;
+}
+
+.tooltipContent > p {
+    display: inline;
+    color: var(--white);
+    font-size: 12px;
+    line-height: 120%;
+}
+
+.tooltipArrow {
+    margin-left: 4px;
+    transform: rotate(-90deg) translateX(-1px);
+}

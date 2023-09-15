@@ -1,0 +1,66 @@
+.container {
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.button:last-child {
+    text-align: right;
+}
+
+.button:nth-child(2) {
+    text-align: center;
+}
+
+.button span {
+    transition: .2s ease;
+}
+
+.button svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    stroke: var(--black);
+}
+
+.button svg path {
+    transition: .2s ease;
+}
+
+.button:hover span {
+    color: var(--orange);
+}
+
+.button .webIcon > path:nth-child(2),
+.button .webIcon > path:nth-child(3) {
+    fill: none;
+    stroke-width: 9;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+
+.button:hover .webIcon > path:first-child {
+    fill: var(--orange);
+    stroke: var(--orange);
+}
+
+.button:hover .webIcon > path {
+    stroke: var(--orange);
+}
+
+.button:hover .downloadIcon > path {
+    fill: var(--orange);
+    stroke: var(--orange);
+}
+
+.button:hover .mirrorIcon > path {
+    fill: var(--orange);
+    stroke: var(--orange);
+}

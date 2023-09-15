@@ -1,0 +1,5 @@
+.lineSeparator {
+    width: 100%;
+    background-color: var(--border-light);
+    height: 1px;
+}
