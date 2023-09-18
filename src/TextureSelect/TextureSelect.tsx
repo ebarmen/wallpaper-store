@@ -3,6 +3,10 @@ import { Header } from './Header';
 import { LineSeparator } from '../LineSeparator';
 import { TextureList } from './TextureList';
 import { canvasTextureContext } from '../context/canvasTextureContext';
+import { BackgroundColorSelector } from '../Constructor/OptionsContainer/Options/BackgroundColorSelector';
+import { canvasOptionsContext } from '../context/canvasOptionsContext';
+import { canvasBackgroundContext } from '../context/canvasBackgroundContext';
+import { CategoryNames, ColorPickersNames } from '../types/namesList';
 
 type BDType = {
     img: string;
@@ -38,7 +42,7 @@ interface ITextureSelectProps {
 
 const domContainer = document.querySelector('#constructor_app');
 // const isFullMode = domContainer?.getAttribute('data-is-fullMode');
-const isFullMode = true;
+const isFullMode = false;
 
 export function TextureSelect({defaultBackgroundData, defaultCategoryIndex, defaultCollectionIndex}:ITextureSelectProps) {
     const [isOpenCategory, setIsOpenCategory] = useState(true);
@@ -46,21 +50,10 @@ export function TextureSelect({defaultBackgroundData, defaultCategoryIndex, defa
     const [textureData, setTextureData] = useState({});
     const [categoryId, setCategoryId] = useState('');
     const [collectionId, setCollectionId] = useState('');
-    const { imgData } = useContext(canvasTextureContext);
+   
+    const { backgroundData } = useContext(canvasBackgroundContext);
+  
 
-    useEffect(() => {
-        if(isFullMode) {
-            if(categoryId || collectionId) return;
-            setTextureData(imgData.fullData);
-            const defaultCategoryId = Object.keys(imgData.fullData)[defaultCategoryIndex];
-            setCategoryId(defaultCategoryId);
-
-            if(defaultCategoryId) {
-                const defaultCollectionId = Object.keys(imgData.fullData[defaultCategoryId].collection)[defaultCollectionIndex];
-                setCollectionId(defaultCollectionId);
-            }
-        }
-    }, [imgData]);
 
     const keyTypedCollection = categoryId as keyof typeof textureData;
     const collectionData = textureData[keyTypedCollection];
@@ -99,7 +92,7 @@ export function TextureSelect({defaultBackgroundData, defaultCategoryIndex, defa
                         defaultBackgroundData={defaultBackgroundData}
                     />
                 </div>
-                <Header text={'Выбор текстуры'} isTextureImage={true}/>
+                <Header text={'2. Выберите цвет рисунка'} isTextureImage={true}/>
                 <LineSeparator />
                 <div>
                     <TextureList
@@ -113,7 +106,9 @@ export function TextureSelect({defaultBackgroundData, defaultCategoryIndex, defa
     } else {
         return (
             <div>
-                <Header text={'Выбор текстуры'} isTextureImage={true}/>
+                <Header text={'1. Выберите материал основы'} isTextureImage={true}/>
+                <BackgroundColorSelector selectedColorPicker={backgroundData.groupName} />
+                <Header text={'2. Выберите цвет рисунка'} isTextureImage={true}/>
                 <LineSeparator />
                 <TextureList />
             </div>

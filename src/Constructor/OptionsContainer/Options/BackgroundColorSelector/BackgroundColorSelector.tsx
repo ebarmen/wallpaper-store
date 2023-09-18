@@ -34,29 +34,9 @@ export function BackgroundColorSelector({selectedColorPicker}:IBackgroundColorSe
 
     return (
         <div className={`${styles.container} row`}>
-            <Dropdown
-                button={
-                <div className={styles.button}>
-                    <div className={classNames('row', styles.nameContainer)}>
-                        {imgData.catalog !== CategoryNames.Pr && <div className={styles.imageContainer}>
-                            <img src={backgroundData.img} alt='img'/>
-                            <div id={'js-background-name'} className={styles.name}>{backgroundData.name}</div>
-                        </div>}
-                        <div id={'js-background-group-name'} className={classNames('self-center', imgData.catalog === CategoryNames.Pr && styles.categoryForPr)}>
-                            {backgroundData.groupName}
-                        </div>
-                    </div>
-
-                    <div className={`self-center mr-left-10 ${styles.price}`}><span>{backgroundData.price}</span> р./м2</div>
-                    <div className={'self-center mr-right-5'}>
-                        <DownIcon />
-                    </div>
-                </div>
-                }
-                onClose={() => setOpenColorPickerKey(null)}
-            >
                 {backgroundData.items.map((item, key) => {
                     return <BackgroundColorSelectorItem
+                        img={backgroundData.img}
                         key={key}
                         price={item.price}
                         premPrice={item.premPrice}
@@ -71,7 +51,8 @@ export function BackgroundColorSelector({selectedColorPicker}:IBackgroundColorSe
                         isLastElem={key === backgroundData.items.length - 1}
                     />
                 })}
-            </Dropdown>
+               
+           
         </div>
     );
 }

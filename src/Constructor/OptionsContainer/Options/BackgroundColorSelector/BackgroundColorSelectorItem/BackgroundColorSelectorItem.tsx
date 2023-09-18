@@ -21,10 +21,12 @@ interface IBackgroundColorSelectorItemProps {
     onSelect: (key: number) => void;
     thisKey: number;
     isLastElem: boolean;
+    img: string;
 }
 
-export function BackgroundColorSelectorItem(props: IBackgroundColorSelectorItemProps) {
-    const { name, price, premPrice, colors, premColors, open, onOpen, selected, onSelect, thisKey, isLastElem} = props;
+export function 
+BackgroundColorSelectorItem(props: IBackgroundColorSelectorItemProps) {
+    const { name, price, premPrice, colors, premColors, open, onOpen, selected, onSelect, thisKey, isLastElem, img} = props;
     const { imgData } = useContext(canvasTextureContext);
     const { backgroundData, setBackgroundData } = useContext(canvasBackgroundContext);
     const [isColorPickerOpen, setIsColorPickerOpen] = useState(open);
@@ -62,11 +64,35 @@ export function BackgroundColorSelectorItem(props: IBackgroundColorSelectorItemP
     }, [open]);
 
     return (
-        <div className={styles.container}>
+      <>    <div onClick={handleOpen}>{name},{price}</div>
+      {isColorPickerOpen && <ColorPicker
+          price={price}
+          premPrice={premPrice}
+          colors={colors}
+          premColors={premColors}
+          name={name}
+          isLastElem={isLastElem}
+          selected={selected}
+          onSelect={handleSelectColor}
+      />}</>
+    );
+}
+
+const BackgroundTooltipContent = () => {
+    return (
+        <div className={styles.tooltipContent}>
+            <p>Перейти на подробное описание материала</p>
+            <DownIcon className={styles.tooltipArrow} color={'#FFFFFF'}/>
+        </div>
+    );
+}
+
+  {/* <div className={styles.container}>
             <div className={styles.contentRow}>
                 <div className={styles.row}>
                     <div className={styles.dataContainer}>
                         <div className={styles.nameWrap}>
+                            <img src={img}/>
                             <p className={classNames(selected && styles.chosenTitle)} onClick={handleSelectCategory}>{name}</p>
                             <Tippy
                                 className={styles.info}
@@ -92,27 +118,4 @@ export function BackgroundColorSelectorItem(props: IBackgroundColorSelectorItemP
                 <div className={styles.dataContainer}>
                     <p>{price} р./м2</p>
                 </div>
-            </div>
-
-            {isColorPickerOpen && <ColorPicker
-                price={price}
-                premPrice={premPrice}
-                colors={colors}
-                premColors={premColors}
-                name={name}
-                isLastElem={isLastElem}
-                selected={selected}
-                onSelect={handleSelectColor}
-            />}
-        </div>
-    );
-}
-
-const BackgroundTooltipContent = () => {
-    return (
-        <div className={styles.tooltipContent}>
-            <p>Перейти на подробное описание материала</p>
-            <DownIcon className={styles.tooltipArrow} color={'#FFFFFF'}/>
-        </div>
-    );
-}
+            </div> */}

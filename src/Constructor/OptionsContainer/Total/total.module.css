@@ -11,6 +11,7 @@
 
 .text {
     white-space: nowrap;
+    font-weight: 700;
 }
 
 .bottomText {
@@ -18,7 +19,9 @@
     font-size: var(--fs-small-plus);
     margin-top: 10px;
 }
-
+.price{
+    font-weight: 700;
+}
 .container .star {
     color: var(--orange);
     font-size: var(--fs-heading);

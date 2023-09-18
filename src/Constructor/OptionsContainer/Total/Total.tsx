@@ -85,7 +85,6 @@ export function Total() {
             <div className={styles.container}>
                 <div className={`${styles.list} row`}>
                     <div className={styles.text}>Итого: </div>
-                    <div>{calcOptionSquare()}м2</div>
                     <div id={'price'} data-price={price} className={styles.price}><span>{price}</span> <span>р.</span><span className={styles.star}> *</span></div>
                 </div>
                 <div className={styles.bottomText}><span className={styles.star}>* </span>Цена может измениться после уточнения технического задания</div>

@@ -69,7 +69,6 @@ function App() {
     useEffect(() => {
         setNewImgData(initialImgData);
         setNewOptionsData(initialOptionsData);
-
         switch (initialImgData.catalog) {
             case CategoryNames.Classic:
                 setNewBackgroundData({

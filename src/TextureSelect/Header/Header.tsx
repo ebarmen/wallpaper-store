@@ -28,7 +28,7 @@ export function Header(props: IHeaderProps) {
 
     return (
         <div className={`${styles.container} row ${isTextureImage ? styles.texture : ''}`} onClick={handleTabState}>
-            <div className={styles.heading}>{text}</div>
+            <div className={`${styles.heading}`}>{text}</div>
             {isTextureImage && (
                 <button id={'textureDownloadApp'} className={styles.button} onClick={handleDownloadTextures}>
                     <svg width="20" height="20" viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">

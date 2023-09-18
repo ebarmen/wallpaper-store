@@ -1,15 +1,11 @@
 .container {
     width: 100%;
     margin-top: 20px;
-    border: 1px solid var(--border-light);
-    border-radius: var(--border-radius);
     font-size: var(--fs-small-plus);
     transition: .2s ease;
 }
 
-.container:hover {
-    border-color: var(--orange);
-}
+
 
 .imageContainer {
     width: 40px;

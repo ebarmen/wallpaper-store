@@ -4,7 +4,9 @@ import axios from 'axios';
 function getTextureData() {
     return axios.get('https://dev.fresq.ru/app/ajax/?type=image').then(response => response);
 };
-
+function getCatalog(){
+    return axios.get('https://dev.fresq.ru/app/ajax/?type=info').then(response => response);
+}
 const url = new URL(window.location.href);
 const getCategory = url.searchParams.get('category');
 const getName = url.searchParams.get('name');
@@ -38,6 +40,8 @@ export const useTextureData = () => {
                             fullData: response.data.items
                         };
                         setTextureData(JSONImgData);
+                        getCatalog().then(res=> console.log(res))
+                        console.log(JSONImgData)
                     }
                 );
         } else {

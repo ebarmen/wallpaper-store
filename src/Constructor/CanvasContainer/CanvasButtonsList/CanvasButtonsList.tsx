@@ -239,6 +239,10 @@ export function CanvasButtonsList(props: ICanvasButtonsList) {
                 <DownloadIcon className={styles.downloadIcon}/>
                 <span>Скачать ПДФ</span>
             </div>
+            <div className={styles.button} onClick={() => handleDownloadPDF()}>
+                <DownloadIcon className={styles.downloadIcon}/>
+                <span>Увеличить</span>
+            </div>
         </div>
     );
 }
