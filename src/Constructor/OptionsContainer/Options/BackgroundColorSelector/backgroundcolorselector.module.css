@@ -1,43 +1,34 @@
 .materialList {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 12px;
-    height: fit-content;
-    padding: 24px 0 12px;
-    visibility: visible;
-    opacity: 1;
-    margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 12px;
+  height: fit-content;
+  padding: 24px 0 12px;
+  visibility: visible;
+  opacity: 1;
+  margin-bottom: 30px;
 }
 
-
-
 @media (max-width: 992px) {
-    .materialList {
-        grid-template-columns: repeat(8, 1fr);
-    }
-
-
+  .materialList {
+    grid-template-columns: repeat(8, 1fr);
+  }
 }
 
 @media (max-width: 767px) {
-    .materialList {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
+  .materialList {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 @media (max-width: 576px) {
-    .materialList {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    
+  .materialList {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 @media (max-width: 420px) {
-    .materialList {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-   
+  .materialList {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

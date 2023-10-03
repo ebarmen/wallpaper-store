@@ -1,169 +1,168 @@
 .container {
-    width: 100%;
-    cursor: pointer;
-    position: relative;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
 }
 
 .name {
-    text-transform: uppercase;
-    margin-top: 10px;
-    color: var(--black);
-    font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  color: var(--black);
+  font-size: 12px;
 }
 
 .text {
-    color: var(--light-font-color);
-    font-size: 11px;
+  color: var(--light-font-color);
+  font-size: 11px;
 }
 
 .centerPrice {
-    text-align: center;
+  text-align: center;
 }
 
 .text span {
-    color: var(--grey66);
+  color: var(--grey66);
 }
-.backgroundName{
+.backgroundName {
+  margin-left: 5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  color: var(--black);
+  font-size: 12px;
+}
+@media screen and (max-width: 700px) {
+  .backgroundName {
     margin-left: 5px;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 5px;
     color: var(--black);
-    font-size: 12px;
+    font-size: 10px;
+  }
 }
-@media screen and (max-width:700px){
-    .backgroundName{
-        margin-left: 5px;
-        text-transform: uppercase;
-        margin-top: 5px;
-        color: var(--black);
-        font-size: 10px;
-    }
-}
-.backgroundName a{
-    color: var(--light-font-color);
+.backgroundName a {
+  color: var(--light-font-color);
 }
 .imageContainer {
-    position: relative;
-    overflow: hidden;
-    transition: all .4s ease;
-    background-color: #e4e4e4;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background-color: #e4e4e4;
+  width: 100%;
+  height: 100%;
 }
-.backgroundprice{
-    color: var(--light-font-color);
-    font-size: 11px;
-    margin-left: 5px;
+.backgroundprice {
+  color: var(--light-font-color);
+  font-size: 11px;
+  margin-left: 5px;
 }
 .imageWrap {
-   padding: 5px;
-    border: 1px solid transparent;
-    transition: .2s ease;
-    width: 100%;
-    aspect-ratio: 1/1;
+  padding: 5px;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .imageWrapSelected {
-    border-color: var(--orange);
-    background-color: white;
+  border-color: var(--orange);
+  background-color: white;
 }
 
 .imageContainer:hover {
-    opacity: .5;
+  opacity: 0.5;
 }
 
 .imageContainer:hover .name {
-    color: var(--orange);
+  color: var(--orange);
 }
 
 .textureImageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e4e4e4;
-    aspect-ratio: 1 / 1;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e4e4;
+  aspect-ratio: 1 / 1;
+  width: 100%;
 }
 
 .imageContainer:not(.textureImageContainer) img {
-    width: 100%;
-    display: block;
-    aspect-ratio: 1/1;
+  width: 100%;
+  display: block;
+  aspect-ratio: 1/1;
 }
 
 .textureImageContainer img {
-    position: absolute;
-    height: 100%;
-    width: auto;
+  position: absolute;
+  height: 100%;
+  width: auto;
 }
 
 .selected img {
-    opacity: .7;
+  opacity: 0.7;
 }
 
 .categoryContainer .name {
-    color: var(--black);
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 4px;
+  color: var(--black);
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 4px;
 }
 
 .categoryContainer:hover img {
-    opacity: .7;
+  opacity: 0.7;
 }
 
 .collectionContainer .name {
-    text-align: center;
+  text-align: center;
 }
 
 .textureContainer .name,
 .textureContainer .text {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 @media (max-width: 767px) {
-    .categoryContainer .text {
-        font-size: 14px;
-    }
+  .categoryContainer .text {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 576px) {
-    .categoryContainer .text {
-        font-size: 12px;
-    }
+  .categoryContainer .text {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 420px) {
-    .categoryContainer .text {
-        font-size: 12px;
-    }
+  .categoryContainer .text {
+    font-size: 12px;
+  }
 }
 .info {
-    padding: 12px 16px 8px;
-    border: 1px solid var(--border-grey);
-    border-radius: 8px;
-    background-color: var(--orange);
-    cursor: pointer !important;
+  padding: 12px 16px 8px;
+  border: 1px solid var(--border-grey);
+  border-radius: 8px;
+  background-color: var(--orange);
+  cursor: pointer !important;
 }
 
 .tooltipContent {
-    margin: 0 0 4px;
+  margin: 0 0 4px;
 }
 
 .tooltipContent > p {
-    display: inline;
-    color: var(--white);
-    font-size: 12px;
-   
+  display: inline;
+  color: var(--white);
+  font-size: 12px;
 }
 
 .tooltipArrow {
-    margin-left: 4px;
-    transform: rotate(-90deg) translateX(-1px);
-    width: 15px;
-    height: 15px;
+  margin-left: 4px;
+  transform: rotate(-90deg) translateX(-1px);
+  width: 15px;
+  height: 15px;
 }
-.image{
-    width: 100%;
-    aspect-ratio: 1/1;
+.image {
+  width: 100%;
+  aspect-ratio: 1/1;
 }

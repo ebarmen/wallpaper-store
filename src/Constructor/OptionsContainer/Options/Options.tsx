@@ -31,10 +31,6 @@ export function Options({ mode, handleFlip }: IOptionsProps) {
     useState<number>(0);
   const [examplesPrCorrection, setExamplesPrCorrection] = useState<number>(0);
 
-
-
-  
-
   useEffect(() => {
     backgroundData.items.forEach((item) => {
       if (item.groupName === backgroundData.groupName) {
@@ -49,26 +45,29 @@ export function Options({ mode, handleFlip }: IOptionsProps) {
               backgroundData.groupName === ColorPickersNames.Pearl ||
               backgroundData.groupName === ColorPickersNames.Texture)
               ? 2000
-              : 0)
+              : 0),
         );
       }
 
       if (item.groupName === backgroundData.groupName && item.excludedOptions) {
         const excludedArr: number[] = item.excludedOptions.map(
-          (option: string) => +option
+          (option: string) => +option,
         );
         setExcludedOptions((_state) => excludedArr);
       } else if (item.groupName === backgroundData.groupName)
         setExcludedOptions((_state) => []);
     });
   }, [backgroundData]);
- 
-
-
 
   return (
     <div className={styles.container}>
-      <div className={styles.heading}><div className={styles.number_container}><span className={styles.span}></span><span className={styles.number}>4</span></div> Опции</div>
+      <div className={styles.heading}>
+        <div className={styles.number_container}>
+          <span className={styles.span}></span>
+          <span className={styles.number}>4</span>
+        </div>{" "}
+        Опции
+      </div>
       {options &&
         options.items &&
         options.items.map((option, key) => {
@@ -76,18 +75,18 @@ export function Options({ mode, handleFlip }: IOptionsProps) {
 
           switch (option.name) {
             case OptionNames.Varnish:
-              option.price=500;
+              option.price = 500;
               option.isPricePerMeter = true;
               correction = 0;
               extraCorrection = 0;
               break;
             case OptionNames.StandartSizes:
-              option.price=6000;
+              option.price = 6000;
               correction = 0;
               extraCorrection = 0;
               break;
             case OptionNames.Seamless:
-              option.price=1500;
+              option.price = 1500;
               option.isPricePerMeter = true;
               correction = 0;
               extraCorrection = 0;
@@ -95,7 +94,7 @@ export function Options({ mode, handleFlip }: IOptionsProps) {
             case OptionNames.Install:
               correction = installCorrection;
               extraCorrection = 0;
-              option.price=1300;
+              option.price = 1300;
               break;
             case OptionNames.Example:
               correction = exampleCorrection;
@@ -117,7 +116,7 @@ export function Options({ mode, handleFlip }: IOptionsProps) {
               key={key}
               className={classNames(
                 excludedOptions.includes(option.id) &&
-                  styles.singleOptionDisabled
+                  styles.singleOptionDisabled,
               )}
             >
               <div className={styles.separator} />

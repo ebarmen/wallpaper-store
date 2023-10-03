@@ -1,67 +1,69 @@
 .textureList {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 12px;
-    height: 0;
-    padding: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: all .2s ease-in-out, opacity .1s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 12px;
+  height: 0;
+  padding: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    all 0.2s ease-in-out,
+    opacity 0.1s ease-in-out;
 }
 .textureList > div {
-    opacity: 0;
+  opacity: 0;
 }
 
 .textureList.open {
-    height: fit-content;
-    padding: 24px 0 12px;
-    visibility: visible;
-    opacity: 1;
+  height: fit-content;
+  padding: 24px 0 12px;
+  visibility: visible;
+  opacity: 1;
 }
 .textureList.open > div {
-    opacity: 1;
+  opacity: 1;
 }
 
 .categoryList {
-    grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 @media (max-width: 992px) {
-    .textureList {
-        grid-template-columns: repeat(8, 1fr);
-    }
+  .textureList {
+    grid-template-columns: repeat(8, 1fr);
+  }
 
-    .categoryList {
-        grid-template-columns: repeat(5, 1fr);
-    }
+  .categoryList {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 @media (max-width: 767px) {
-    .textureList {
-        grid-template-columns: repeat(6, 1fr);
-    }
+  .textureList {
+    grid-template-columns: repeat(6, 1fr);
+  }
 
-    .categoryList {
-        grid-template-columns: repeat(4, 1fr);
-    }
+  .categoryList {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (max-width: 576px) {
-    .textureList {
-        grid-template-columns: repeat(5, 1fr);
-    }
+  .textureList {
+    grid-template-columns: repeat(5, 1fr);
+  }
 
-    .categoryList {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .categoryList {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 420px) {
-    .textureList {
-        grid-template-columns: repeat(4, 1fr);
-    }
+  .textureList {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-    .categoryList {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .categoryList {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

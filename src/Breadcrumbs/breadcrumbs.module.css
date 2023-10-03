@@ -1,31 +1,31 @@
-.fh{
-    margin-left: 0px;
-    color: var(--light-font-color);
-    margin-right: 15px;
+.fh {
+  margin-left: 0px;
+  color: var(--light-font-color);
+  margin-right: 15px;
 }
-.breadcrums div{
-    margin-right: 15px;
-    margin-left: 15px;
-    color: var(--light-font-color);
+.breadcrums div {
+  margin-right: 15px;
+  margin-left: 15px;
+  color: var(--light-font-color);
 }
-.breadcrums{
-    margin-bottom: 35px;
-    display: flex;
+.breadcrums {
+  margin-bottom: 35px;
+  display: flex;
 }
-@media screen and (max-width:700px){
-    .breadcrums{
-        margin-top: 5px;
+@media screen and (max-width: 700px) {
+  .breadcrums {
+    margin-top: 5px;
     margin-bottom: 15px;
     font-size: 11px;
-    }
-    .fh{
-        margin-left: 0px;
-        color: var(--light-font-color);
-        margin-right: 5px;
-    }
-    .breadcrums div{
-        margin-right:5px;
-        margin-left: 5px;
-        color: var(--light-font-color);
-    }
+  }
+  .fh {
+    margin-left: 0px;
+    color: var(--light-font-color);
+    margin-right: 5px;
+  }
+  .breadcrums div {
+    margin-right: 5px;
+    margin-left: 5px;
+    color: var(--light-font-color);
+  }
 }

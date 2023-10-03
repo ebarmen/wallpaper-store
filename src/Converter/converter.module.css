@@ -1,27 +1,27 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .container textarea {
-    width: 100%;
-    max-width: 800px;
-    margin-top: 40px;
-    resize: none;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 40px;
+  resize: none;
 }
 
 .container button {
-    padding: 10px 20px;
-    color: var(--white);
-    background-color: var(--orange);
-    font-size: 20px;
+  padding: 10px 20px;
+  color: var(--white);
+  background-color: var(--orange);
+  font-size: 20px;
 }
 
 .container a {
-    color: var(--blue);
-    font-size: 18px;
-    text-decoration: underline;
+  color: var(--blue);
+  font-size: 18px;
+  text-decoration: underline;
 }

@@ -1,138 +1,138 @@
 .container {
-    justify-content: space-between;
-    width: 100%;
-    font-size: var(--fs-small-plus);
-    flex-wrap: nowrap;
-    margin: 20px 0;
+  justify-content: space-between;
+  width: 100%;
+  font-size: var(--fs-small-plus);
+  flex-wrap: nowrap;
+  margin: 20px 0;
 }
 
 .disabled {
-    opacity: 0.5;
-    cursor: not-allowed !important;
+  opacity: 0.5;
+  cursor: not-allowed !important;
 }
 
 .nameContainer {
-    width: max-content;
-    line-height: 15px;
-    align-self: center;
-    letter-spacing: 0.005em;
-    margin: 0 3px 0 8px;
+  width: max-content;
+  line-height: 15px;
+  align-self: center;
+  letter-spacing: 0.005em;
+  margin: 0 3px 0 8px;
 }
 
 .priceContainer {
-    align-self: center;
-    width: fit-content;
-    margin-left: 4px;
-    color: var(--light-font-color);
-    white-space: nowrap;
-    text-align: right;
+  align-self: center;
+  width: fit-content;
+  margin-left: 4px;
+  color: var(--light-font-color);
+  white-space: nowrap;
+  text-align: right;
 }
 
 .iconContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 28px;
-    height: 28px;
-    border: 1px solid var(--border-grey);
-    border-radius: 30px;
-    text-align: center;
-    cursor: pointer;
-    transition: .2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border-grey);
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .disabled .iconContainer {
-    cursor: not-allowed !important;
+  cursor: not-allowed !important;
 }
 
 .iconContainer:hover {
-    border-color: var(--orange);
+  border-color: var(--orange);
 }
 
 .disabled .iconContainer:hover {
-    border-color: var(--border-grey);
+  border-color: var(--border-grey);
 }
 
 .iconContainer svg {
-    width: 75%;
-    height: 75%;
+  width: 75%;
+  height: 75%;
 }
 
 .iconContainerSmall {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .tooltipIco {
-    color: var(--light-font-color);
-    transition: .2s ease;
-    cursor: pointer;
+  color: var(--light-font-color);
+  transition: 0.2s ease;
+  cursor: pointer;
 }
 
 .disabled .tooltipIco {
-    cursor: not-allowed !important;
+  cursor: not-allowed !important;
 }
 
 .tooltipIco:hover {
-    color: var(--orange);
+  color: var(--orange);
 }
 
 .disabled .tooltipIco:hover {
-    color: var(--light-font-color);
+  color: var(--light-font-color);
 }
 
 .info {
-    padding: 12px 16px 8px;
-    border: 1px solid var(--border-grey);
-    border-radius: 8px;
-    background-color: var(--white);
-    cursor: pointer !important;
+  padding: 12px 16px 8px;
+  border: 1px solid var(--border-grey);
+  border-radius: 8px;
+  background-color: var(--white);
+  cursor: pointer !important;
 }
 
 .tooltipContent h2 {
-    margin: 0 0 6px;
-    color: var(--black);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 120%;
-    text-align: center;
+  margin: 0 0 6px;
+  color: var(--black);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
 }
 
 .tooltipContent p {
-    margin: 0 0 4px;
-    color: var(--black);
-    font-size: 12px;
-    line-height: 120%;
+  margin: 0 0 4px;
+  color: var(--black);
+  font-size: 12px;
+  line-height: 120%;
 }
 
 .extraContainer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .extraOptions {
-    position: relative;
-    top: -10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-left: 4px;
-    font-size: 12px;
+  position: relative;
+  top: -10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 4px;
+  font-size: 12px;
 }
 
 .checkmark {
-    width: 75%;
-    height: 75%;
-    border-radius: 100%;
-    background-color: var(--orange);
-    visibility: hidden;
-    transform: scale(0);
-    transition: .2s ease;
+  width: 75%;
+  height: 75%;
+  border-radius: 100%;
+  background-color: var(--orange);
+  visibility: hidden;
+  transform: scale(0);
+  transition: 0.2s ease;
 }
 
 .checkmarkChecked {
-    visibility: visible;
-    transform: scale(1);
+  visibility: visible;
+  transform: scale(1);
 }

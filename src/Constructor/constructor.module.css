@@ -1,15 +1,15 @@
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 55px;
-    width: 100%;
-    margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 55px;
+  width: 100%;
+  margin: 40px 0;
 }
 
 @media (max-width: 992px) {
-    .container {
-        flex-direction: column;
-        gap: 40px;
-    }
+  .container {
+    flex-direction: column;
+    gap: 40px;
+  }
 }

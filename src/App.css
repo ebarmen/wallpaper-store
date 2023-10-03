@@ -1,127 +1,127 @@
 @font-face {
-    font-family: 'PT Serif';
-    src: url('./fonts/pt_serif-regular.ttf') format('ttf');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "PT Serif";
+  src: url("./fonts/pt_serif-regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
-    --white: #ffffff;
-    --black: #333333;
-    --blue: #0000F7;
-    --orange: #ff5100;
-    --green: #a9ff00;
-    --light-font-color: #868686;
-    --border-light: #cecece;
-    --border-grey: #cccccc;
-    --whiteLightness: 100%;
-    --white: hsl(0, 0%, var(--whiteLightness));
-    --grey66: hsl(0, 0%, calc(var(--whiteLightness) - 60%));
-    --fs-heading: 20px;
-    --fs-sub-heading: 16px;
-    --fs-small: 10px;
-    --fs-small-plus:  12px;
-    --canvas-mr-left: 30px;
-    --border-radius: 0;
-    --background-color-selector-width: 262px;
-    --drop-shadow: drop-shadow(5px 5px 5px #747474);
-    --transition: .3s;
+  --white: #ffffff;
+  --black: #333333;
+  --blue: #0000f7;
+  --orange: #ff5100;
+  --green: #a9ff00;
+  --light-font-color: #868686;
+  --border-light: #cecece;
+  --border-grey: #cccccc;
+  --whiteLightness: 100%;
+  --white: hsl(0, 0%, var(--whiteLightness));
+  --grey66: hsl(0, 0%, calc(var(--whiteLightness) - 60%));
+  --fs-heading: 20px;
+  --fs-sub-heading: 16px;
+  --fs-small: 10px;
+  --fs-small-plus: 12px;
+  --canvas-mr-left: 30px;
+  --border-radius: 0;
+  --background-color-selector-width: 262px;
+  --drop-shadow: drop-shadow(5px 5px 5px #747474);
+  --transition: 0.3s;
 }
 
 * {
-    color: var(--black);
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  color: var(--black);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 button {
-    padding: 0;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
 }
 
 .row {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .upper-text {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .downIcon {
-    margin-top: -2px;
-    transform: rotate(-90deg);
-    transition: .2s ease;
+  margin-top: -2px;
+  transform: rotate(-90deg);
+  transition: 0.2s ease;
 }
 
 .open .downIcon {
-    transform: rotate(0);
+  transform: rotate(0);
 }
 
 .self-center {
-    align-self: center;
+  align-self: center;
 }
 
 .dropShadow {
-    filter: var(--drop-shadow);
+  filter: var(--drop-shadow);
 }
 
 .bold {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .mr-right-5 {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .mr-left-10 {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .texture_element_selected img {
-    opacity: .7;
+  opacity: 0.7;
 }
 
 .texture_element_selected .element_name {
-    color: var(--orange) !important;
+  color: var(--orange) !important;
 }
 
 .tippy-arrow {
-    background: var(--border-grey);;
-    text-align: center;
-    color: var(--white);
-    position: relative;
-    z-index: 99;
-    bottom: 0;
+  background: var(--border-grey);
+  text-align: center;
+  color: var(--white);
+  position: relative;
+  z-index: 99;
+  bottom: 0;
 }
 
 .tippy-arrow::after {
-    content: '';
-    width: 0;
-    height: 0;
-    display: block;
-    position: absolute;
-    z-index: 10;
-    border: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    margin-left: -10px;
-    left: 50%;
-    border-top: 10px solid var(--border-grey);;
-    bottom: -10px;
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  border: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin-left: -10px;
+  left: 50%;
+  border-top: 10px solid var(--border-grey);
+  bottom: -10px;
 }

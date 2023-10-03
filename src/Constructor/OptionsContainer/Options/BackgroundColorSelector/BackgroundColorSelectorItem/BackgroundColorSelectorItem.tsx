@@ -25,7 +25,7 @@ interface IBackgroundColorSelectorItemProps {
 }
 
 export function BackgroundColorSelectorItem(
-  props: IBackgroundColorSelectorItemProps
+  props: IBackgroundColorSelectorItemProps,
 ) {
   const {
     name,
@@ -43,7 +43,7 @@ export function BackgroundColorSelectorItem(
   } = props;
   const { imgData } = useContext(canvasTextureContext);
   const { backgroundData, setBackgroundData } = useContext(
-    canvasBackgroundContext
+    canvasBackgroundContext,
   );
   const [isColorPickerOpen, setIsColorPickerOpen] = useState(open);
 
@@ -81,37 +81,39 @@ export function BackgroundColorSelectorItem(
 
   return (
     <>
-  
       <div className={styles.container} onClick={handleSelectCategory}>
-        <div className={classNames(styles.imageWrap, selected && styles.imageWrapSelected)}>
         <div
           className={classNames(
-            styles.imageContainer
-            
+            styles.imageWrap,
+            selected && styles.imageWrapSelected,
           )}
         >
-          {selected && <img src={backgroundData.img} />}
+          <div className={classNames(styles.imageContainer)}>
+            {selected && <img src={backgroundData.img} />}
+          </div>
         </div>
-        </div>
-        <div className={styles.backgroundName}>{name}  <Tippy
-          className={styles.info}
-          content={<BackgroundTooltipContent />}
-          interactive={true}
-          interactiveBorder={10}
-          delay={100}
-          duration={100}
-          animation={"scale"}
-          allowHTML={true}
-        >
-          <a
-            href={`/info/materials/#material_${name}`}
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className={styles.backgroundName}>
+          {name}{" "}
+          <Tippy
+            className={styles.info}
+            content={<BackgroundTooltipContent />}
+            interactive={true}
+            interactiveBorder={10}
+            delay={100}
+            duration={100}
+            animation={"scale"}
+            allowHTML={true}
           >
-            (?)
-          </a>
-        </Tippy></div>
-       
+            <a
+              href={`/info/materials/#material_${name}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              (?)
+            </a>
+          </Tippy>
+        </div>
+
         <div className={styles.backgroundprice}>{price} р./м2</div>
       </div>
     </>

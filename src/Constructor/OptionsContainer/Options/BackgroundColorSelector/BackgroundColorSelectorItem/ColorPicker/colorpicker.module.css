@@ -1,187 +1,183 @@
 .container {
-    height: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    visibility: hidden;
-    opacity: 0;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: all .2s ease-in-out, opacity .1s linear, height 1s linear;
+  height: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition:
+    all 0.2s ease-in-out,
+    opacity 0.1s linear,
+    height 1s linear;
 }
 
 .container.open {
-    height: fit-content;
-    margin-bottom: 20px;
-    visibility: visible;
-    opacity: 1;
-    transform: scaleY(1);
-    padding: 20px;
-   
- 
-    
+  height: fit-content;
+  margin-bottom: 20px;
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+  padding: 20px;
 }
 .arrow {
-	padding: 10px;
-	position: relative;
-	background: #fff;
-	border: 1px solid orange;
+  padding: 10px;
+  position: relative;
+  background: #fff;
+  border: 1px solid orange;
 }
 
 .arrow:after,
 .arrow:before {
-    content: ""; 
-	border: solid transparent;
-	position: absolute;
+  content: "";
+  border: solid transparent;
+  position: absolute;
 }
-.arrowtop:after, 
+.arrowtop:after,
 .arrowtop:before {
-	
-	bottom: 100%;
+  bottom: 100%;
 }
 .arrowtop:after {
-	border-bottom-color: #fff;
-	border-width: 18px;
+  border-bottom-color: #fff;
+  border-width: 18px;
 }
 .arrowtop:before {
-	border-bottom-color: var(--orange);
-	border-width: 19px;
-	margin-left: -1px;
+  border-bottom-color: var(--orange);
+  border-width: 19px;
+  margin-left: -1px;
 }
 
-.arrowtop0:after, 
+.arrowtop0:after,
 .arrowtop0:before {
-	left: calc((105px + 12px)*0.3);
+  left: calc((105px + 12px) * 0.3);
 }
-.arrowtop1:after, 
+.arrowtop1:after,
 .arrowtop1:before {
-	left: calc((115px + 12px)*1);
+  left: calc((115px + 12px) * 1);
 }
-.arrowtop2:after, 
+.arrowtop2:after,
 .arrowtop2:before {
-	left: calc((115px + 12px)*2);
+  left: calc((115px + 12px) * 2);
 }
-.arrowtop3:after, 
+.arrowtop3:after,
 .arrowtop3:before {
-	left: calc((115px + 12px)*3);
+  left: calc((115px + 12px) * 3);
 }
-.arrowtop4:after, 
+.arrowtop4:after,
 .arrowtop4:before {
-	left: calc((115px + 12px)*4);
+  left: calc((115px + 12px) * 4);
 }
-.arrowtop5:after, 
+.arrowtop5:after,
 .arrowtop5:before {
-	left: calc((115px + 12px)*5);
+  left: calc((115px + 12px) * 5);
 }
-.arrowtop6:after, 
+.arrowtop6:after,
 .arrowtop6:before {
-	left: calc((115px + 12px)*6);
+  left: calc((115px + 12px) * 6);
 }
-.arrowtop7:after, 
+.arrowtop7:after,
 .arrowtop7:before {
-	left: calc((115px + 12px)*7);
+  left: calc((115px + 12px) * 7);
 }
 .container.last.open {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .header {
-   
-    margin: 10px 5px;
+  margin: 10px 5px;
 }
-.colorName{
-    color: var(--orange);
-    margin-bottom: 15px;
+.colorName {
+  color: var(--orange);
+  margin-bottom: 15px;
 }
 .colorsList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 700px) {
+  .colorsList {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 40px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .name {
+    margin-top: 0px;
+    font-size: 11px;
+    color: var(--black);
+    margin-left: 5px;
+  }
+  .price {
+    color: var(--light-font-color);
+    font-size: 8px;
+    margin-left: 5px;
+  }
 }
-@media screen and (max-width: 700px){
-    .colorsList {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 10px;
-        margin-bottom: 10px;
-    }
-    .name {
-        margin-top: 0px;
-         font-size: 11px;
-         color: var(--black);
-         margin-left: 5px;
-     }
-     .price{
-        color: var(--light-font-color);
-        font-size: 8px;
-        margin-left: 5px;
-    }
+@media screen and (min-width: 700px) {
+  .price {
+    color: var(--light-font-color);
+    font-size: 12px;
+    margin-left: 5px;
+  }
 }
-@media screen and (min-width: 700px){
-    .price{
-        color: var(--light-font-color);
-        font-size: 12px;
-        margin-left: 5px;
-    }
-}
-
 
 .colorItem {
-    cursor: pointer;
-    transition: var(--transition);
-    position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
 }
-.colorItemselected{
-    border: 1px solid var(--orange);
+.colorItemselected {
+  border: 1px solid var(--orange);
 }
-.colorItemselected .name{
-    color: var(--orange);
+.colorItemselected .name {
+  color: var(--orange);
 }
-.imageWrapper:hover{
-    border: 1px solid var(--orange);
+.imageWrapper:hover {
+  border: 1px solid var(--orange);
 }
-.colorItem:hover .name{
-    color: var(--orange);
+.colorItem:hover .name {
+  color: var(--orange);
 }
-.imageContainer{
-    width: 100%;
-    aspect-ratio: 1/1;
-    height: 100%;
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 1/1;
+  height: 100%;
 }
-.imageWrapper{
-    padding: 5px;
-    width: 100%;
-    aspect-ratio: 1/1;
+.imageWrapper {
+  padding: 5px;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
-@media screen and (min-width: 700px){
-    .name {
-        margin-top: 6px;
-         font-size: 14px;
-         color: var(--black);
-         margin-left: 5px;
-     }
+@media screen and (min-width: 700px) {
+  .name {
+    margin-top: 6px;
+    font-size: 14px;
+    color: var(--black);
+    margin-left: 5px;
+  }
 }
 
 .mark {
-    position: absolute;
-    bottom: 3px;
-    right: 3px;
-    display: flex;
-    border: 1px solid var(--white);
-    border-radius: 100%;
-    background-color: var(--orange);
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  display: flex;
+  border: 1px solid var(--white);
+  border-radius: 100%;
+  background-color: var(--orange);
 }
 .mark svg {
-    width: 12px;
-    height: 12px;
+  width: 12px;
+  height: 12px;
 }
 .colorItem img {
-    width: 100%;
-    aspect-ratio: 1/1;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 .premPrice {
-    color: var(--light-font-color);
+  color: var(--light-font-color);
 }
-

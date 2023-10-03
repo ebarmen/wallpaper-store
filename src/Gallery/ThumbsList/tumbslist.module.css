@@ -1,72 +1,68 @@
 .embla_thumbs {
-    --thumbs-slide-spacing: 0.8rem;
-    --thumbs-slide-height: 9rem;
-    margin-right: 30px;
-  }
-  .embla_thumbs__viewport {
-    overflow: hidden;
+  --thumbs-slide-spacing: 0.8rem;
+  --thumbs-slide-height: 9rem;
+  margin-right: 30px;
+}
+.embla_thumbs__viewport {
+  overflow: hidden;
+}
+.embla_thumbs__container {
+  display: flex;
+  flex-direction: column;
+  height: 45rem;
+}
+@media screen and (max-width: 700px) {
+  .embla_thumbs {
+    margin-right: 10px;
   }
   .embla_thumbs__container {
-    display: flex;
-    flex-direction: column;
-    height: 45rem;
-    
-  }
-  @media screen and (max-width:700px){
-    .embla_thumbs{
-      margin-right: 10px;
-    }
-    .embla_thumbs__container{
-      height: 30rem;
-    }
-    .embla_thumbs__slide{
-      width:50px;
-      height: 50px;
-      margin-bottom: 8px;
-      overflow: hidden;
-      
-    }
-  }
-  @media screen and (min-width:800px){
-    .embla_thumbs__slide {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 15px;
-    }
+    height: 30rem;
   }
   .embla_thumbs__slide {
-   
-    position: relative;
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+    overflow: hidden;
   }
-  @media (min-width: 576px) {
-    .embla_thumbs__slide {
-      
-    }
+}
+@media screen and (min-width: 800px) {
+  .embla_thumbs__slide {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
   }
-  .embla_thumbs__slide__button {
-    -webkit-appearance: none;
-    background-color: transparent;
-    touch-action: manipulation;
-    display: block;
-    text-decoration: none;
-    cursor: pointer;
-    border: 0;
-    padding: 0;
-    margin: 7px;
-    width: 90px;
-    transition: opacity 0.2s;
-    height: 90px;
+}
+.embla_thumbs__slide {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 576px) {
+  .embla_thumbs__slide {
   }
-  .embla_thumbs__slide__selected{
-    border: 1px solid var(--orange)
-  }
-  .embla_thumbs__slide__img {
-    display: block;
-    height: 90px;
-    width: 90px;
-    object-fit: cover;
-  }
+}
+.embla_thumbs__slide__button {
+  -webkit-appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 7px;
+  width: 90px;
+  transition: opacity 0.2s;
+  height: 90px;
+}
+.embla_thumbs__slide__selected {
+  border: 1px solid var(--orange);
+}
+.embla_thumbs__slide__img {
+  display: block;
+  height: 90px;
+  width: 90px;
+  object-fit: cover;
+}

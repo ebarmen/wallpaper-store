@@ -1,9 +1,9 @@
 .button {
-    border: 1px solid var(--border-light);
-    border-radius: var(--border-radius);
-    padding: 6px 10px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: var(--fs-small-plus);
-    cursor: pointer;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius);
+  padding: 6px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--fs-small-plus);
+  cursor: pointer;
 }

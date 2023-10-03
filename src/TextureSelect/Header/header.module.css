@@ -1,130 +1,129 @@
 .container {
-    display: flex;
-    padding: 24px 0 16px;
-    cursor: pointer;
+  display: flex;
+  padding: 24px 0 16px;
+  cursor: pointer;
 }
 
 .container.texture {
-    cursor: auto;
+  cursor: auto;
 }
 
 .heading {
-    font-size: var(--fs-heading);
-    font-weight: 800;
-    margin: 0;
-    color: #ff6d03; 
+  font-size: var(--fs-heading);
+  font-weight: 800;
+  margin: 0;
+  color: #ff6d03;
 }
-@media screen and (max-width: 700px){
-    .heading {
-        font-size: 16px;
-        font-weight: 700;
-        margin: 0;
-        color: #ff6d03;
-
-    }
+@media screen and (max-width: 700px) {
+  .heading {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    color: #ff6d03;
+  }
 }
 .number_container {
-    display: inline-block;
-    position: relative;
-    top: 0.7em;
-  }
-  
-  .span {
-    display: inline-block;
-    color: var(--orange);
-    border: 2px solid var(--orange);
-    text-align: center;
-    border-radius: 50%;
-    padding: 45% 0;
-    width: 100%;
-    position: absolute;
-    transform: translateY(-50%);
-  }
-  
-  .number {
-    position: relative;
-    top: -.7em;
-    padding: 0em 0.65em;
-    color: var(--orange);
-  }
+  display: inline-block;
+  position: relative;
+  top: 0.7em;
+}
+
+.span {
+  display: inline-block;
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  text-align: center;
+  border-radius: 50%;
+  padding: 45% 0;
+  width: 100%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.number {
+  position: relative;
+  top: -0.7em;
+  padding: 0em 0.65em;
+  color: var(--orange);
+}
 .container a {
-    margin-top: 6px;
-    opacity: .7;
-    display: block;
-    margin-left: 26px;
+  margin-top: 6px;
+  opacity: 0.7;
+  display: block;
+  margin-left: 26px;
 }
 
 .container svg {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .iconContainer {
-    height: 24px;
-    width: 24px;
+  height: 24px;
+  width: 24px;
 }
 
 .iconContainer svg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .container .button span {
-    display: inline-block;
-    margin-top: 3px;
-    vertical-align: top;
-    transition: .2s ease;
+  display: inline-block;
+  margin-top: 3px;
+  vertical-align: top;
+  transition: 0.2s ease;
 }
 
 .container .button:hover span {
-    color: var(--orange);
+  color: var(--orange);
 }
 
 .container .button svg {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .container .button svg path {
-    transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .container .button:hover svg path:first-child {
-    fill: var(--orange);
+  fill: var(--orange);
 }
 
 .container .button:hover svg path:nth-child(2) {
-    stroke: var(--orange);
+  stroke: var(--orange);
 }
 
 .headerIcon path {
-    transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .container:hover .headerIcon path {
-    stroke: var(--orange);
+  stroke: var(--orange);
 }
 
 @media (max-width: 400px) {
-    .container.texture  {
-        flex-direction: column;
-    }
+  .container.texture {
+    flex-direction: column;
+  }
 
-    .rowMobileColumn button {
-        text-align: left;
-        margin-top: 20px;
-    }
+  .rowMobileColumn button {
+    text-align: left;
+    margin-top: 20px;
+  }
 }
-.buttonDonwloadTexture{
-    align-self: flex-end;
-    margin-left: 300px;
+.buttonDonwloadTexture {
+  align-self: flex-end;
+  margin-left: 300px;
 }
-.link_materials{
-    color: var(--light-font-color);
+.link_materials {
+  color: var(--light-font-color);
 }
-.link_materials:hover{
-color: var(--orange);
+.link_materials:hover {
+  color: var(--orange);
 }
-@media screen and (max-width: 700px){
-    .link_materials{
-        font-size: 13px;
-    }
+@media screen and (max-width: 700px) {
+  .link_materials {
+    font-size: 13px;
+  }
 }

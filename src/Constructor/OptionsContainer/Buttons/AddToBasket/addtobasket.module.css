@@ -1,85 +1,83 @@
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white);
-    padding: 12px;
-    border: 1px solid transparent;
-    text-align: center;
-    font-size: var(--fs-small-plus);
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: .2s ease;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  padding: 12px;
+  border: 1px solid transparent;
+  text-align: center;
+  font-size: var(--fs-small-plus);
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.2s ease;
+  position: relative;
 }
 
 .button svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    vertical-align: bottom;
-    transition: .9s ease;
-    fill: var(--white);
-   
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: bottom;
+  transition: 0.9s ease;
+  fill: var(--white);
 }
 .addToBasketButton svg {
-    position: absolute;
-    top: 9px;
-    bottom: 0;
-    left: 120px;
+  position: absolute;
+  top: 9px;
+  bottom: 0;
+  left: 120px;
 }
 
 .button svg path {
-    transition: .2s ease;
-    fill: var(--white)
+  transition: 0.2s ease;
+  fill: var(--white);
 }
 
 .button:hover {
-    border-color: var(--orange);
-    color: var(--orange);
+  border-color: var(--orange);
+  color: var(--orange);
 }
 
 .button:hover svg path:first-child {
-    fill: var(--orange);
+  fill: var(--orange);
 }
 .button:hover svg path:nth-child(2) {
-    stroke: var(--orange);
+  stroke: var(--orange);
 }
 
 .addToBasketButton {
-    color: var(--white);
-    background-color: #00ad25;
-    font-size: 15px;
+  color: var(--white);
+  background-color: #00ad25;
+  font-size: 15px;
 }
 
-
 .addToBasketButton svg > path:last-child {
-    stroke: var(--white);
+  stroke: var(--white);
 }
 
 .addToBasketButton:hover {
-    border-color: var(--orange);
-    color: var(--orange);
-    background-color: var(--white);
+  border-color: var(--orange);
+  color: var(--orange);
+  background-color: var(--white);
 }
 
 .addToBasketButton:hover svg > path:first-child {
-    fill: var(--orange);
+  fill: var(--orange);
 }
 .addToBasketButton:hover svg path:nth-child(2) {
-    stroke: var(--orange);
+  stroke: var(--orange);
 }
 
-.whatsapp{
-    color:#00a800;
-    border-color: #00a800;
+.whatsapp {
+  color: #00a800;
+  border-color: #00a800;
 }
-.example{
-    background-color: #ff6d03;
-    color: var(--white)
+.example {
+  background-color: #ff6d03;
+  color: var(--white);
 }
-.example:hover{
-    color: var(--orange);
-    border: 1px solid var(--orange);
-    background-color: var(--white);
+.example:hover {
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  background-color: var(--white);
 }

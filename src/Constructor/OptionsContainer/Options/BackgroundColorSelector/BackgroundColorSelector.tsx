@@ -16,11 +16,11 @@ export function BackgroundColorSelector({
   selectedColorPicker,
 }: IBackgroundColorSelectorProps) {
   const { backgroundData, setBackgroundData } = useContext(
-    canvasBackgroundContext
+    canvasBackgroundContext,
   );
   const { imgData } = useContext(canvasTextureContext);
   const [openColorPickerKey, setOpenColorPickerKey] = useState<number | null>(
-    null
+    null,
   );
 
   const domContainer = document.querySelector("#constructor_app");
@@ -32,43 +32,42 @@ export function BackgroundColorSelector({
   };
 
   const handleSelectColorPicker = (key: number) => {
-   /*   setBackgroundData({
+    /*   setBackgroundData({
          ...backgroundData,
         groupName: backgroundData.items[key].groupName
      }); */
   };
-  
+
   return (
     <>
-     
       <div className={`${styles.container} row`}>
-      <ul className={classNames(styles.materialList)}>
-        {backgroundData.items.map((item, key) => {
-          return (
-            <BackgroundColorSelectorItem
-              img={backgroundData.img}
-              key={key}
-              price={item.price}
-              premPrice={item.premPrice}
-              name={item.groupName}
-              colors={item.colors}
-              open={openColorPickerKey === key}
-              onOpen={(key) => handleOpenColorPicker(key)}
-              selected={selectedColorPicker === item.groupName}
-              onSelect={(key) => handleSelectColorPicker(key)}
-              premColors={item.premColors}
-              thisKey={key}
-              isLastElem={key === backgroundData.items.length - 1}
-            />
-          );
-        })}
+        <ul className={classNames(styles.materialList)}>
+          {backgroundData.items.map((item, key) => {
+            return (
+              <BackgroundColorSelectorItem
+                img={backgroundData.img}
+                key={key}
+                price={item.price}
+                premPrice={item.premPrice}
+                name={item.groupName}
+                colors={item.colors}
+                open={openColorPickerKey === key}
+                onOpen={(key) => handleOpenColorPicker(key)}
+                selected={selectedColorPicker === item.groupName}
+                onSelect={(key) => handleSelectColorPicker(key)}
+                premColors={item.premColors}
+                thisKey={key}
+                isLastElem={key === backgroundData.items.length - 1}
+              />
+            );
+          })}
         </ul>
       </div>
       {backgroundData.items.map((item, key) => {
         if (key == openColorPickerKey && item.colors) {
           return (
             <ColorPicker
-             key={key}
+              key={key}
               price={item.price}
               premPrice={item.premPrice}
               colors={item.colors}

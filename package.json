@@ -38,7 +38,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"**/*.+(js|jsx|tsx|json|css|md)\""
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +61,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.184",
-    "@types/react-image-gallery": "^1.2.0"
+    "@types/react-image-gallery": "^1.2.0",
+    "prettier": "^3.0.3"
   }
 }
