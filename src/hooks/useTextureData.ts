@@ -5,7 +5,7 @@ function getTextureData() {
     return axios.get('https://dev.fresq.ru/app/ajax/?type=image').then(response => response);
 };
 function getCatalog(){
-    return axios.get('https://dev.fresq.ru/app/ajax/?type=info').then(response => response);
+    return axios.get('https://dev.fresq.ru/app/ajax/?type=cartimages').then(response => response);
 }
 const url = new URL(window.location.href);
 const getCategory = url.searchParams.get('category');
@@ -15,8 +15,8 @@ const getPrice = url.searchParams.get('imgPrice');
 
 export const useTextureData = () => {
     const domContainer = document.querySelector('#constructor_app');
-    // const isFullMode = domContainer?.getAttribute('data-is-fullMode');
-    const isFullMode = true;
+    const isFullMode = domContainer?.getAttribute('data-is-fullMode');
+   // const isFullMode = true;
 
     const [textureData, setTextureData] = useState({ img: '', price: 0, catalog: '', items: [{ id: '', name: '', img: '', price: 0 }], fullData: {} });
 
@@ -40,8 +40,8 @@ export const useTextureData = () => {
                             fullData: response.data.items
                         };
                         setTextureData(JSONImgData);
-                        getCatalog().then(res=> console.log(res))
-                        console.log(JSONImgData)
+                        
+                        
                     }
                 );
         } else {
@@ -71,6 +71,7 @@ export const useTextureData = () => {
                     fullData: {}
                 };
             setTextureData(ImgData);
+           
         }
     }, []);
 

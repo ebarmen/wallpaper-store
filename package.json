@@ -16,6 +16,7 @@
     "axios": "^0.27.2",
     "buffer": "^6.0.3",
     "classnames": "^2.3.2",
+    "embla-carousel-react": "^8.0.0-rc14",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.5.25",
@@ -58,6 +59,7 @@
     ]
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.184"
+    "@types/lodash": "^4.14.184",
+    "@types/react-image-gallery": "^1.2.0"
   }
 }

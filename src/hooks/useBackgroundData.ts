@@ -13,8 +13,8 @@ const getGroupName = url.searchParams.get('groupName');
 
 export const useBackgroundData = () => {
     const domContainer = document.querySelector('#constructor_app');
-    // const isFullMode = domContainer?.getAttribute('data-is-fullMode');
-    const isFullMode = true;
+ const isFullMode = domContainer?.getAttribute('data-is-fullMode');
+//const isFullMode = true;
 
     const [backgroundData, setBackgroundData] = useState({ img: '', name: '', price: 0, groupName: '', items: [{ id: '', groupName: '', premPrice: 0, price: 0, excludedOptions: false, installPrice: 0, examplePrice: 0, exampleExtraPrice: 0, examplesPrPrice: 0, colors: [{ img: '', name: '' }], premColors: [{ img: '', name: '' }] }] });
 

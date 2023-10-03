@@ -10,6 +10,7 @@
     cursor: pointer;
     margin-bottom: 10px;
     transition: .2s ease;
+    position: relative;
 }
 
 .button svg {
@@ -18,7 +19,14 @@
     margin-right: 10px;
     vertical-align: bottom;
     transition: .9s ease;
-    fill: var(--white)
+    fill: var(--white);
+   
+}
+.addToBasketButton svg {
+    position: absolute;
+    top: 9px;
+    bottom: 0;
+    left: 120px;
 }
 
 .button svg path {
@@ -69,4 +77,9 @@
 .example{
     background-color: #ff6d03;
     color: var(--white)
+}
+.example:hover{
+    color: var(--orange);
+    border: 1px solid var(--orange);
+    background-color: var(--white);
 }

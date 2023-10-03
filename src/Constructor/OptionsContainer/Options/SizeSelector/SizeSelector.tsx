@@ -86,7 +86,7 @@ export function SizeSelector({mode}:SizeSelectorProps) {
                             </p>
                         }
                         </div>
-                        <div>{wallArea}м2</div>
+                        <div className={styles.wallArea}>{wallArea}м2</div>
                     </div>
                 </div>
             )}

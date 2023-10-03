@@ -13,6 +13,7 @@ import { useBackgroundData } from './hooks/useBackgroundData';
 import { useOptionsData } from './hooks/useOptionsData';
 import { CategoryNames, ModeNames } from './types/namesList';
 import { Converter } from './Converter';
+import BestSellers from './BestSellers/BestSellers';
 
 const initialHandFrame = { width: 140, height: 220, x: 0, y: 35 };
 
@@ -114,6 +115,7 @@ function App() {
                                 {initialImgData && !isConverter && (<div className='App'>
                                     <TextureSelect defaultBackgroundData={initialBackgroundData} defaultCategoryIndex={defaultCategoryIndex} defaultCollectionIndex={defaultCollectionIndex}/>
                                     <Constructor mode={mode} isSeamless={isSeamless} isSigned={isSigned}/>
+                                    {/* <BestSellers/> */}
                                 </div>)}
                                 {isConverter && <Converter />}
                             </CanvasBackgroundProvider>

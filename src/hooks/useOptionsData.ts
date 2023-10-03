@@ -45,6 +45,7 @@ export const useOptionsData = () => {
 
         getOptionsData()
             .then(response => {
+            
                 if (isSubscribed) {
                     if (response.status) {
                         const hiddenOptions = getHiddenOptions?.split(',');

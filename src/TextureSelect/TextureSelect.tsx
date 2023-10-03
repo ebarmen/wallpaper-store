@@ -7,6 +7,13 @@ import { BackgroundColorSelector } from '../Constructor/OptionsContainer/Options
 import { canvasOptionsContext } from '../context/canvasOptionsContext';
 import { canvasBackgroundContext } from '../context/canvasBackgroundContext';
 import { CategoryNames, ColorPickersNames } from '../types/namesList';
+import { EmblaOptionsType } from 'embla-carousel-react'
+import EmblaCarousel from '../Gallery/Gallery';
+import Info from '../Info/Info';
+import styles from './textureselect.module.css'
+import Breadcrumbs from '../Breadcrumbs/Breadcrumbs';
+
+const OPTIONS: EmblaOptionsType = {}
 
 type BDType = {
     img: string;
@@ -41,8 +48,9 @@ interface ITextureSelectProps {
 }
 
 const domContainer = document.querySelector('#constructor_app');
-// const isFullMode = domContainer?.getAttribute('data-is-fullMode');
-const isFullMode = false;
+ const isFullModee = domContainer?.getAttribute('data-is-fullMode');
+ const isFullMode = isFullModee ? true : false
+//const isFullMode = false;
 
 export function TextureSelect({defaultBackgroundData, defaultCategoryIndex, defaultCollectionIndex}:ITextureSelectProps) {
     const [isOpenCategory, setIsOpenCategory] = useState(true);
@@ -50,10 +58,22 @@ export function TextureSelect({defaultBackgroundData, defaultCategoryIndex, defa
     const [textureData, setTextureData] = useState({});
     const [categoryId, setCategoryId] = useState('');
     const [collectionId, setCollectionId] = useState('');
-   
+    const { imgData } = useContext(canvasTextureContext);
     const { backgroundData } = useContext(canvasBackgroundContext);
   
+    useEffect(() => {
+        if(isFullMode) {
+            if(categoryId || collectionId) return;
+            setTextureData(imgData.fullData);
+            const defaultCategoryId = Object.keys(imgData.fullData)[defaultCategoryIndex];
+            setCategoryId(defaultCategoryId);
 
+            if(defaultCategoryId) {
+                const defaultCollectionId = Object.keys(imgData.fullData[defaultCategoryId].collection)[defaultCollectionIndex];
+                setCollectionId(defaultCollectionId);
+            }
+        }
+    }, [imgData]);
 
     const keyTypedCollection = categoryId as keyof typeof textureData;
     const collectionData = textureData[keyTypedCollection];
@@ -69,7 +89,7 @@ export function TextureSelect({defaultBackgroundData, defaultCategoryIndex, defa
 
         return (
             <div>
-                <Header text={'Выбор каталога'} isOpen={isOpenCategory} onHandleOpen={(newState) => {setIsOpenCategory(newState)}}/>
+                <Header isFullMode={isFullMode} text={'Выбор каталога'} number = {''} isOpen={isOpenCategory} onHandleOpen={(newState) => {setIsOpenCategory(newState)}}/>
                 <LineSeparator />
                 <div>
                     <TextureList
@@ -80,7 +100,7 @@ export function TextureSelect({defaultBackgroundData, defaultCategoryIndex, defa
                         selectedCategoryId={categoryId}
                     />
                 </div>
-                <Header text={'Выбор коллекции'} isOpen={isOpenCollection} onHandleOpen={(newState) => {setIsOpenCollection(newState)}}/>
+                <Header isFullMode={isFullMode} text={'Выбор коллекции'} number = {''} isOpen={isOpenCollection} onHandleOpen={(newState) => {setIsOpenCollection(newState)}}/>
                 <LineSeparator />
                 <div>
                     <TextureList
@@ -92,7 +112,10 @@ export function TextureSelect({defaultBackgroundData, defaultCategoryIndex, defa
                         defaultBackgroundData={defaultBackgroundData}
                     />
                 </div>
-                <Header text={'2. Выберите цвет рисунка'} isTextureImage={true}/>
+                <Header isFullMode={isFullMode} text={'1. Выберите материал основы'} number = {''} isTextureImage={true} isMaterial={true}/>
+               
+               <BackgroundColorSelector selectedColorPicker={backgroundData.groupName} />
+                <Header isFullMode={isFullMode} text={'2. Выберите цвет рисунка'} number = {''} isTextureImage={true}/>
                 <LineSeparator />
                 <div>
                     <TextureList
@@ -106,11 +129,17 @@ export function TextureSelect({defaultBackgroundData, defaultCategoryIndex, defa
     } else {
         return (
             <div>
-                <Header text={'1. Выберите материал основы'} isTextureImage={true}/>
+                <div className="container_fresq">
+                <Breadcrumbs/>
+                <EmblaCarousel slides={[]} options={OPTIONS}/>
+                <Info isTextureImage={true}/>
+                <div className={styles.calc_price}>расчет стоимости</div>
+                <LineSeparator/>
+                <Header text={' Выберите материал основы'} isFullMode={isFullMode} number={'1'} isTextureImage={true} isMaterial={true}/>
                 <BackgroundColorSelector selectedColorPicker={backgroundData.groupName} />
-                <Header text={'2. Выберите цвет рисунка'} isTextureImage={true}/>
-                <LineSeparator />
+                <Header isFullMode={isFullMode} text={' Выберите цвет рисунка'} number={'2'} isTextureImage={true}/>              
                 <TextureList />
+                </div>
             </div>
         );
     }

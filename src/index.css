@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container_fresq{
+  width: 1300px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1300px) {
+  .container_fresq{
+    width: 1000px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container_fresq{
+    width: 700px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container_fresq{
+    width: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container_fresq{
+    width: 380px;
+  }
+}

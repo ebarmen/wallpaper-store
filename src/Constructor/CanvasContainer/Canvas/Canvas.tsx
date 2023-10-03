@@ -265,7 +265,7 @@ export const Canvas = ({
             setIsFirstRender(false);
         }
     }, [handFrameData]);
-
+   
     useEffect(() => {
         function handleResize() {
             const newGrid = canvasWidth / gridCnt;

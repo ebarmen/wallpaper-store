@@ -22,9 +22,8 @@ export function Constructor(props: IConstructorProps) {
     } 
 
     return (
-        <div>
-            <Header mode={mode}/>
-            <LineSeparator />
+        <div className='container_fresq'>
+            <Header mode={mode}/>        
             <div className={`${styles.container} row`}>
                 <CanvasContainer mode={mode} isSeamless={isSeamless} isFlipped={flipped} isSigned={isSigned}/>
                 <OptionsContainer mode={mode} handleFlip={handleFlip} />

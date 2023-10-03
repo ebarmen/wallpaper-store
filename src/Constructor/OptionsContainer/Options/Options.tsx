@@ -64,22 +64,43 @@ export function Options({ mode, handleFlip }: IOptionsProps) {
   }, [backgroundData]);
  
 
+
+
   return (
     <div className={styles.container}>
-      <div className={styles.heading}>Опции</div>
+      <div className={styles.heading}><div className={styles.number_container}><span className={styles.span}></span><span className={styles.number}>4</span></div> Опции</div>
       {options &&
         options.items &&
         options.items.map((option, key) => {
           let correction, extraCorrection;
 
           switch (option.name) {
+            case OptionNames.Varnish:
+              option.price=500;
+              option.isPricePerMeter = true;
+              correction = 0;
+              extraCorrection = 0;
+              break;
+            case OptionNames.StandartSizes:
+              option.price=6000;
+              correction = 0;
+              extraCorrection = 0;
+              break;
+            case OptionNames.Seamless:
+              option.price=1500;
+              option.isPricePerMeter = true;
+              correction = 0;
+              extraCorrection = 0;
+              break;
             case OptionNames.Install:
               correction = installCorrection;
               extraCorrection = 0;
+              option.price=1300;
               break;
             case OptionNames.Example:
               correction = exampleCorrection;
               extraCorrection = exampleExtraCorrection;
+              option.price = 500;
               break;
             case OptionNames.Examples:
               correction = examplesPrCorrection;

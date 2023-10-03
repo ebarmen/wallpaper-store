@@ -1,6 +1,5 @@
 .container {
     display: flex;
-    justify-content: space-between;
     padding: 24px 0 16px;
     cursor: pointer;
 }
@@ -13,13 +12,46 @@
     font-size: var(--fs-heading);
     font-weight: 800;
     margin: 0;
-    color: #ff6d03;
+    color: #ff6d03; 
 }
+@media screen and (max-width: 700px){
+    .heading {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+        color: #ff6d03;
 
+    }
+}
+.number_container {
+    display: inline-block;
+    position: relative;
+    top: 0.7em;
+  }
+  
+  .span {
+    display: inline-block;
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    text-align: center;
+    border-radius: 50%;
+    padding: 45% 0;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+  
+  .number {
+    position: relative;
+    top: -.7em;
+    padding: 0em 0.65em;
+    color: var(--orange);
+  }
 .container a {
-    font-size: var(--fs-small-plus);
-    display: block;
     margin-top: 6px;
+    opacity: .7;
+    display: block;
+    margin-left: 26px;
 }
 
 .container svg {
@@ -79,5 +111,20 @@
     .rowMobileColumn button {
         text-align: left;
         margin-top: 20px;
+    }
+}
+.buttonDonwloadTexture{
+    align-self: flex-end;
+    margin-left: 300px;
+}
+.link_materials{
+    color: var(--light-font-color);
+}
+.link_materials:hover{
+color: var(--orange);
+}
+@media screen and (max-width: 700px){
+    .link_materials{
+        font-size: 13px;
     }
 }

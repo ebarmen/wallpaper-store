@@ -1,5 +1,5 @@
 .container {
-    width: 262px;
+   
     display: flex;
     flex-direction: column;
     justify-content: space-between;

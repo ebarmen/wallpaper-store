@@ -236,11 +236,28 @@ export function CanvasButtonsList(props: ICanvasButtonsList) {
             </div>
             <div id={'js-hidden-make-weblink'} style={{display:'none'}} onClick={() => handleMakeWebLinkToDataAttr()}></div>
             <div className={styles.button} onClick={() => handleDownloadPDF()}>
-                <DownloadIcon className={styles.downloadIcon}/>
+                {/* <DownloadIcon className={styles.downloadIcon}/> */}
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+	 viewBox="0 0 156.5 156.5" width={'20px'} height={'20px'}>
+<path d="M118.8,65.7c-2.8-2.8-7.3-2.8-10,0L85.3,89.1V35.2c0-3.9-3.2-7.1-7.1-7.1s-7.1,3.2-7.1,7.1v53.9L47.7,65.7
+	c-2.8-2.8-7.3-2.8-10,0c-2.8,2.8-2.8,7.3,0,10l34.4,34.4c1.7,1.7,3.9,2.5,6.2,2.5c2.2,0,4.5-0.8,6.2-2.5l34.4-34.4
+	C121.6,72.9,121.6,68.4,118.8,65.7z"/>
+<g>
+	<g>
+		<path d="M117.6,156.3H38.9c-21.3,0-38.7-17.4-38.7-38.7V38.9c0-21.3,17.4-38.7,38.7-38.7h78.7c21.3,0,38.7,17.4,38.7,38.7v78.7
+			C156.3,138.9,138.9,156.3,117.6,156.3z M38.9,14.4c-13.5,0-24.5,11-24.5,24.5v78.7c0,13.5,11,24.5,24.5,24.5h78.7
+			c13.5,0,24.5-11,24.5-24.5V38.9c0-13.5-11-24.5-24.5-24.5C117.6,14.4,38.9,14.4,38.9,14.4z"/>
+	</g>
+</g>
+<g>
+	<path d="M112.7,128.1H43.8c-3.9,0-7.1-3.2-7.1-7.1s3.2-7.1,7.1-7.1h68.8c3.9,0,7.1,3.2,7.1,7.1S116.6,128.1,112.7,128.1z"/>
+</g>
+</svg>
                 <span>Скачать ПДФ</span>
             </div>
             <div className={styles.button} onClick={() => handleDownloadPDF()}>
                 <DownloadIcon className={styles.downloadIcon}/>
+                
                 <span>Увеличить</span>
             </div>
         </div>

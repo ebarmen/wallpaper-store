@@ -6,9 +6,48 @@
     font-size: var(--fs-sub-heading);
     font-weight: 800;
     margin-bottom: 15px;
-    margin-top: 20px;
+    margin-top: -75px;
+}
+@media screen and (max-width: 700px){
+  .heading {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
 }
 
 .singleOptionDisabled {
     display: none;
 }
+.heading{
+    color: var(--orange);
+    font-size: var(--fs-heading);
+    font-weight: 800;
+}
+.number_container {
+    display: inline-block;
+    position: relative;
+    top: 0.7em;
+  }
+  
+  .span {
+    display: inline-block;
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    text-align: center;
+    border-radius: 50%;
+    padding: 45% 0;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    margin-left: -5px;
+  }
+  
+  .number {
+    position: relative;
+    top: -.7em;
+    padding: 0em 0.65em;
+    color: var(--orange);
+    left: -5px;
+  }
